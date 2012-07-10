@@ -102,7 +102,7 @@ status_t GraphicBufferMapper::getphys(buffer_handle_t handle, void** paddr)
 
     err = mAllocMod->getphys(mAllocMod, handle, paddr);
 
-    LOGW_IF(err, "getphys(%p) fail %d(%s)",
+    ALOGW_IF(err, "getphys(%p) fail %d(%s)",
             handle, err, strerror(-err));
     return err;
 }
